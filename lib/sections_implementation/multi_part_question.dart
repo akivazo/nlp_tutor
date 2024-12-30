@@ -1,19 +1,19 @@
 import 'package:flutter/material.dart';
 
-class MultiPartQuestion extends StatefulWidget {
+class MultiPartQuestionViewer extends StatefulWidget {
   final String question;
   final List<String> wrongOptions;
   final String rightOption;
   final String correctResponse;
   final String wrongResponse;
 
-  const MultiPartQuestion({super.key, required this.question, required this.wrongOptions, required this.rightOption, required this.correctResponse, required this.wrongResponse});
+  const MultiPartQuestionViewer({super.key, required this.question, required this.wrongOptions, required this.rightOption, required this.correctResponse, required this.wrongResponse});
 
   @override
-  State<MultiPartQuestion> createState() => _MultiPartQuestionState();
+  State<MultiPartQuestionViewer> createState() => _MultiPartQuestionViewerState();
 }
 
-class _MultiPartQuestionState extends State<MultiPartQuestion> {
+class _MultiPartQuestionViewerState extends State<MultiPartQuestionViewer> {
   String response = "";
   late List<String> options;
 

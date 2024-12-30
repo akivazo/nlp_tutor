@@ -49,16 +49,50 @@ Map<String, dynamic> _$IntroductionToJson(Introduction instance) =>
     };
 
 Question _$QuestionFromJson(Map<String, dynamic> json) => Question(
+      json['type'] as String,
+    );
+
+Map<String, dynamic> _$QuestionToJson(Question instance) => <String, dynamic>{
+      'type': instance.type,
+    };
+
+MultiOptionsQuestion _$MultiOptionsQuestionFromJson(
+        Map<String, dynamic> json) =>
+    MultiOptionsQuestion(
       json['rightOption'] as String,
       (json['wrongOptions'] as List<dynamic>).map((e) => e as String).toList(),
       question: json['question'] as String,
       responses: Responses.fromJson(json['responses'] as Map<String, dynamic>),
+      type: json['type'] as String,
     );
 
-Map<String, dynamic> _$QuestionToJson(Question instance) => <String, dynamic>{
+Map<String, dynamic> _$MultiOptionsQuestionToJson(
+        MultiOptionsQuestion instance) =>
+    <String, dynamic>{
+      'type': instance.type,
       'question': instance.question,
       'rightOption': instance.rightOption,
       'wrongOptions': instance.wrongOptions,
+      'responses': instance.responses,
+    };
+
+TextHighlightQuestion _$TextHighlightQuestionFromJson(
+        Map<String, dynamic> json) =>
+    TextHighlightQuestion(
+      text: json['text'] as String,
+      question: json['question'] as String,
+      rightSentence: json['rightSentence'] as String,
+      responses: Responses.fromJson(json['responses'] as Map<String, dynamic>),
+      type: json['type'] as String,
+    );
+
+Map<String, dynamic> _$TextHighlightQuestionToJson(
+        TextHighlightQuestion instance) =>
+    <String, dynamic>{
+      'type': instance.type,
+      'text': instance.text,
+      'question': instance.question,
+      'rightSentence': instance.rightSentence,
       'responses': instance.responses,
     };
 

@@ -2,6 +2,10 @@ import 'package:flutter/material.dart';
 import 'package:nlp_tutor/entrance.dart';
 
 void main() {
+  FlutterError.onError = (FlutterErrorDetails details) {
+    FlutterError.presentError(details); // Log the error
+    debugPrint('Caught Flutter error: ${details.exception}');
+  };
   runApp(const MainApp());
 }
 

@@ -1,3 +1,4 @@
+
 import 'package:json_annotation/json_annotation.dart';
 
 part 'chapter_schema.g.dart';
@@ -43,18 +44,53 @@ class Introduction {
 }
 
 @JsonSerializable()
-class Question {
+class Question{
+  final String type;
+
+  Question(this.type);
+  
+  factory Question.fromJson(Map<String, dynamic> json) {
+    switch (json['type'] as String) {
+      case 'MultiOptionsQuestion':
+        return MultiOptionsQuestion.fromJson(json);
+      case 'TextHighlightQuestion':
+        return TextHighlightQuestion.fromJson(json);
+      default:
+        throw Exception('Unknown type: ${json['type']}');
+    }
+  }
+}
+
+@JsonSerializable()
+class MultiOptionsQuestion extends Question {
   final String question;
   final String rightOption;
   final List<String> wrongOptions;
   final Responses responses;
 
-  Question(this.rightOption, this.wrongOptions,
-      {required this.question, required this.responses});
+  MultiOptionsQuestion(this.rightOption, this.wrongOptions,
+      {required this.question, required this.responses, required String type}) : super(type);
 
-  factory Question.fromJson(Map<String, dynamic> json) =>
-      _$QuestionFromJson(json);
-  Map<String, dynamic> toJson() => _$QuestionToJson(this);
+  factory MultiOptionsQuestion.fromJson(Map<String, dynamic> json) =>
+      _$MultiOptionsQuestionFromJson(json);
+  Map<String, dynamic> toJson() => _$MultiOptionsQuestionToJson(this);
+}
+
+
+@JsonSerializable()
+class TextHighlightQuestion extends Question {
+  final String text;
+  final String question;
+  final String rightSentence;
+  final Responses responses;
+
+
+
+  factory TextHighlightQuestion.fromJson(Map<String, dynamic> json) =>
+      _$TextHighlightQuestionFromJson(json);
+
+  TextHighlightQuestion({required this.text, required this.question, required this.rightSentence, required this.responses, required String type}): super(type);
+  Map<String, dynamic> toJson() => _$TextHighlightQuestionToJson(this);
 }
 
 @JsonSerializable()

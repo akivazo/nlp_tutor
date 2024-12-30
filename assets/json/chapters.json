@@ -1,215 +1,75 @@
 [
-    {
-      "title": "Chapter 1: Basics of Neuro-Linguistic Programming",
-      "introduction": {
-        "explanation": "Introduction to Neuro-Linguistic Programming (NLP) and its foundational concepts.",
-        "examples": ["Understanding Communication", "The NLP Model"],
-        "video": "sw_O7C1OzD0"
-      },
-      "subChapters": [
-        {
-          "title": "SubChapter 1.1: Communication Model",
-          "questions": [
-            {
-              "question": "What is the primary focus of NLP?",
-              "rightOption": "Understanding how people communicate and behave",
-              "wrongOptions": ["Programming computers", "Analyzing large datasets"],
-              "responses": {
-                "correct": "Correct! NLP is about understanding communication and behavior.",
-                "incorrect": "Incorrect. NLP focuses on communication and behavior, not technology."
-              }
-            },
-            {
-              "question": "What are the three components of the NLP communication model?",
-              "rightOption": "Mind, Language, Behavior",
-              "wrongOptions": ["Thought, Emotions, Speech", "Body, Mind, Actions"],
-              "responses": {
-                "correct": "Well done! Mind, Language, and Behavior are key components.",
-                "incorrect": "Not quite. The correct components are Mind, Language, and Behavior."
-              }
-            },
-            {
-              "question": "Why is understanding communication important in NLP?",
-              "rightOption": "It helps improve interactions and relationships",
-              "wrongOptions": ["It builds programming skills", "It translates languages"],
-              "responses": {
-                "correct": "Exactly! Communication is central to improving relationships.",
-                "incorrect": "No, NLP emphasizes improving interactions through communication."
-              }
-            }
-          ]
-        },
-        {
-          "title": "SubChapter 1.2: Representational Systems",
-          "questions": [
-            {
-              "question": "What are representational systems in NLP?",
-              "rightOption": "Ways individuals perceive the world",
-              "wrongOptions": ["Programming models", "Behavioral strategies"],
-              "responses": {
-                "correct": "Correct! Representational systems are how we perceive the world.",
-                "incorrect": "Not quite. Representational systems are about perception."
-              }
-            },
-            {
-              "question": "Which are the primary representational systems?",
-              "rightOption": "Visual, Auditory, Kinesthetic",
-              "wrongOptions": ["Tactile, Olfactory, Gustatory", "Logical, Emotional, Behavioral"],
-              "responses": {
-                "correct": "Good job! Visual, Auditory, and Kinesthetic are key systems.",
-                "incorrect": "Nope. The primary systems are Visual, Auditory, and Kinesthetic."
-              }
-            },
-            {
-              "question": "How do representational systems affect communication?",
-              "rightOption": "They influence how messages are sent and received",
-              "wrongOptions": ["They determine intelligence", "They block communication"],
-              "responses": {
-                "correct": "Exactly! Representational systems shape communication.",
-                "incorrect": "No, they influence how we send and receive messages."
-              }
-            }
-          ]
-        },
-        {
-          "title": "SubChapter 1.3: NLP Presuppositions",
-          "questions": [
-            {
-              "question": "What are NLP presuppositions?",
-              "rightOption": "Assumptions to guide communication and behavior",
-              "wrongOptions": ["Rules for programming", "Therapeutic techniques"],
-              "responses": {
-                "correct": "Correct! Presuppositions are guiding assumptions in NLP.",
-                "incorrect": "Incorrect. Presuppositions guide communication, not programming."
-              }
-            },
-            {
-              "question": "Which is a common NLP presupposition?",
-              "rightOption": "The map is not the territory",
-              "wrongOptions": ["All behavior is conscious", "Emotions are logical"],
-              "responses": {
-                "correct": "Well done! 'The map is not the territory' is a key NLP concept.",
-                "incorrect": "No, 'The map is not the territory' is a foundational NLP idea."
-              }
-            },
-            {
-              "question": "Why are presuppositions useful in NLP?",
-              "rightOption": "They provide a framework for understanding behavior",
-              "wrongOptions": ["They enforce strict rules", "They analyze data"],
-              "responses": {
-                "correct": "Exactly! Presuppositions help understand and guide behavior.",
-                "incorrect": "Nope. Presuppositions provide a framework for understanding behavior."
-              }
-            }
-          ]
-        }
-      ]
+  {
+    "title": "Introduction to Neuro-Linguistic Programming (NLP)",
+    "introduction": {
+      "explanation": "This chapter provides an overview of NLP, focusing on its principles, techniques, and applications in communication and personal development.",
+      "examples": [
+        "Using anchoring to associate positive emotions with actions.",
+        "Modeling successful behaviors to improve performance.",
+        "Reframing situations to gain new perspectives."
+      ],
+      "video": "https://example.com/intro-to-nlp"
     },
-    {
-      "title": "Chapter 2: NLP Techniques",
-      "introduction": {
-        "explanation": "Learn key techniques used in Neuro-Linguistic Programming to achieve personal and professional growth.",
-        "examples": ["Anchoring", "Reframing"],
-        "video": "sw_O7C1OzD0"
+    "subChapters": [
+      {
+        "title": "Core Concepts of NLP",
+        "questions": [
+          {
+            "type": "MultiOptionsQuestion",
+            "question": "What are the three main components of NLP?",
+            "rightOption": "Neurology, Language, and Programming",
+            "wrongOptions": [
+              "Neurons, Linguistics, and Processing",
+              "Networking, Logic, and Psychology",
+              "Negotiation, Listening, and Perception"
+            ],
+            "responses": {
+              "correct": "Correct! NLP focuses on Neurology, Language, and Programming.",
+              "incorrect": "Incorrect. The correct answer is Neurology, Language, and Programming."
+            }
+          },
+          {
+            "type": "TextHighlightQuestion",
+            "text": "Neuro-Linguistic Programming (NLP) is a psychological approach that involves analyzing strategies used by successful individuals and applying them to reach personal goals. It focuses on the connections between neurological processes, language, and behavioral patterns.",
+            "question": "Highlight the part of the text that describes the main focus of NLP.",
+            "rightSentence": "It focuses on the connections between neurological processes, language, and behavioral patterns.",
+            "responses": {
+              "correct": "Well done! That is the main focus of NLP.",
+              "incorrect": "Not quite. Look for the section that mentions 'neurological processes, language, and behavioral patterns.'"
+            }
+          }
+        ]
       },
-      "subChapters": [
-        {
-          "title": "SubChapter 2.1: Anchoring",
-          "questions": [
-            {
-              "question": "What is anchoring in NLP?",
-              "rightOption": "Creating an association between a stimulus and a response",
-              "wrongOptions": ["Defining a goal", "Analyzing emotions"],
-              "responses": {
-                "correct": "Correct! Anchoring creates a link between a stimulus and response.",
-                "incorrect": "Not quite. Anchoring is about linking stimuli and responses."
-              }
-            },
-            {
-              "question": "When is anchoring most effective?",
-              "rightOption": "When emotions are strong",
-              "wrongOptions": ["During logical reasoning", "While multitasking"],
-              "responses": {
-                "correct": "Well done! Anchoring works best when emotions are strong.",
-                "incorrect": "Incorrect. Strong emotions enhance anchoring effectiveness."
-              }
-            },
-            {
-              "question": "How can anchoring be used?",
-              "rightOption": "To recall positive states during challenges",
-              "wrongOptions": ["To block communication", "To avoid change"],
-              "responses": {
-                "correct": "Exactly! Anchoring helps recall positive states.",
-                "incorrect": "Nope. Anchoring is used to recall positive states."
-              }
+      {
+        "title": "Techniques in NLP",
+        "questions": [
+          {
+            "type": "MultiOptionsQuestion",
+            "question": "What is the process of associating a physical stimulus with a desired emotional response in NLP called?",
+            "rightOption": "Anchoring",
+            "wrongOptions": [
+              "Framing",
+              "Visualization",
+              "Calibration"
+            ],
+            "responses": {
+              "correct": "Correct! Anchoring is a core technique in NLP.",
+              "incorrect": "Incorrect. The correct answer is Anchoring."
             }
-          ]
-        },
-        {
-          "title": "SubChapter 2.2: Reframing",
-          "questions": [
-            {
-              "question": "What is reframing in NLP?",
-              "rightOption": "Changing the perspective to alter meaning",
-              "wrongOptions": ["Breaking a task into steps", "Defining clear goals"],
-              "responses": {
-                "correct": "Correct! Reframing changes perspective to shift meaning.",
-                "incorrect": "Incorrect. Reframing is about altering perspective."
-              }
-            },
-            {
-              "question": "Which type of reframing focuses on intent?",
-              "rightOption": "Content reframing",
-              "wrongOptions": ["Context reframing", "Behavioral reframing"],
-              "responses": {
-                "correct": "Good job! Content reframing addresses intent.",
-                "incorrect": "No, content reframing focuses on intent."
-              }
-            },
-            {
-              "question": "Why is reframing useful?",
-              "rightOption": "It shifts negative experiences into learning opportunities",
-              "wrongOptions": ["It avoids emotions", "It ensures consistency"],
-              "responses": {
-                "correct": "Exactly! Reframing turns negatives into learning opportunities.",
-                "incorrect": "Nope. Reframing transforms negative experiences."
-              }
+          },
+          {
+            "type": "TextHighlightQuestion",
+            "text": "Reframing in NLP involves changing the context or meaning of an experience to produce a new, more empowering perspective.",
+            "question": "Highlight the part of the text that defines 'Reframing' in NLP.",
+            "rightSentence": "Reframing in NLP involves changing the context or meaning of an experience to produce a new, more empowering perspective.",
+            "responses": {
+              "correct": "That's correct! Reframing helps create empowering perspectives.",
+              "incorrect": "Not quite. Try focusing on the part that describes the definition of 'Reframing.'"
             }
-          ]
-        },
-        {
-          "title": "SubChapter 2.3: Rapport Building",
-          "questions": [
-            {
-              "question": "What is rapport in NLP?",
-              "rightOption": "A sense of trust and connection",
-              "wrongOptions": ["Analyzing behavior", "Structuring goals"],
-              "responses": {
-                "correct": "Correct! Rapport is about trust and connection.",
-                "incorrect": "Not quite. Rapport builds trust and connection."
-              }
-            },
-            {
-              "question": "Which technique helps build rapport?",
-              "rightOption": "Mirroring",
-              "wrongOptions": ["Analyzing text", "Evaluating outcomes"],
-              "responses": {
-                "correct": "Well done! Mirroring helps establish rapport.",
-                "incorrect": "Incorrect. Mirroring is effective for building rapport."
-              }
-            },
-            {
-              "question": "Why is rapport important?",
-              "rightOption": "It fosters effective communication",
-              "wrongOptions": ["It avoids interaction", "It enforces rules"],
-              "responses": {
-                "correct": "Exactly! Rapport enhances communication effectiveness.",
-                "incorrect": "Nope. Rapport is key for effective communication."
-              }
-            }
-          ]
-        }
-      ]
-    }
-  ]
+          }
+        ]
+      }
+    ]
+  }
 
+]
