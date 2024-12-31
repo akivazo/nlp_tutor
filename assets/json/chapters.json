@@ -1,14 +1,14 @@
 [
   {
-    "title": "Introduction to Neuro-Linguistic Programming (NLP)",
+    "title": "Introduction to NLP",
     "introduction": {
-      "explanation": "This chapter provides an overview of NLP, focusing on its principles, techniques, and applications in communication and personal development.",
+      "explanation": "This chapter introduces Neuro-Linguistic Programming (NLP) and its core principles.",
       "examples": [
         "Using anchoring to associate positive emotions with actions.",
         "Modeling successful behaviors to improve performance.",
         "Reframing situations to gain new perspectives."
       ],
-      "video": "https://example.com/intro-to-nlp"
+      "videoYoutubeId": "sw_O7C1OzD0&t=1s"
     },
     "subChapters": [
       {
@@ -30,46 +30,49 @@
           },
           {
             "type": "TextHighlightQuestion",
-            "text": "Neuro-Linguistic Programming (NLP) is a psychological approach that involves analyzing strategies used by successful individuals and applying them to reach personal goals. It focuses on the connections between neurological processes, language, and behavioral patterns.",
+            "text": "Neuro-Linguistic Programming (NLP) is a psychological approach that involves analyzing strategies used by successful individuals and applying them to reach personal goals.",
             "question": "Highlight the part of the text that describes the main focus of NLP.",
-            "rightSentence": "It focuses on the connections between neurological processes, language, and behavioral patterns.",
+            "rightSentence": "involves analyzing strategies used by successful individuals and applying them to reach personal goals.",
             "responses": {
               "correct": "Well done! That is the main focus of NLP.",
-              "incorrect": "Not quite. Look for the section that mentions 'neurological processes, language, and behavioral patterns.'"
+              "incorrect": "Not quite. Look for the part describing the goal of NLP."
             }
           }
         ]
-      },
+      }
+    ]
+  },
+  {
+    "title": "Advanced NLP Techniques",
+    "introduction": {
+      "explanation": "This chapter explores advanced NLP techniques such as anchoring, modeling, and reframing.",
+      "examples": [
+        "Anchoring positive states during stressful events.",
+        "Modeling top performers to replicate their success.",
+        "Reframing negative experiences to find empowering meanings."
+      ],
+      "videoYoutubeId": "abc123xyz456"
+    },
+    "subChapters": [
       {
-        "title": "Techniques in NLP",
+        "title": "Anchoring in NLP",
         "questions": [
           {
             "type": "MultiOptionsQuestion",
-            "question": "What is the process of associating a physical stimulus with a desired emotional response in NLP called?",
-            "rightOption": "Anchoring",
+            "question": "What is anchoring in NLP?",
+            "rightOption": "Associating a physical stimulus with a desired emotional response.",
             "wrongOptions": [
-              "Framing",
-              "Visualization",
-              "Calibration"
+              "Changing the context of an experience.",
+              "Identifying limiting beliefs.",
+              "Creating new neural pathways."
             ],
             "responses": {
-              "correct": "Correct! Anchoring is a core technique in NLP.",
-              "incorrect": "Incorrect. The correct answer is Anchoring."
-            }
-          },
-          {
-            "type": "TextHighlightQuestion",
-            "text": "Reframing in NLP involves changing the context or meaning of an experience to produce a new, more empowering perspective.",
-            "question": "Highlight the part of the text that defines 'Reframing' in NLP.",
-            "rightSentence": "Reframing in NLP involves changing the context or meaning of an experience to produce a new, more empowering perspective.",
-            "responses": {
-              "correct": "That's correct! Reframing helps create empowering perspectives.",
-              "incorrect": "Not quite. Try focusing on the part that describes the definition of 'Reframing.'"
+              "correct": "Correct! Anchoring is a key technique in NLP.",
+              "incorrect": "Incorrect. The correct answer is associating a physical stimulus with a desired emotional response."
             }
           }
         ]
       }
     ]
   }
-
 ]

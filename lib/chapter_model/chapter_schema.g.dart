@@ -38,14 +38,14 @@ Introduction _$IntroductionFromJson(Map<String, dynamic> json) => Introduction(
       explanation: json['explanation'] as String,
       examples:
           (json['examples'] as List<dynamic>).map((e) => e as String).toList(),
-      video: json['video'] as String,
+      videoYoutubeId: json['videoYoutubeId'] as String,
     );
 
 Map<String, dynamic> _$IntroductionToJson(Introduction instance) =>
     <String, dynamic>{
       'explanation': instance.explanation,
       'examples': instance.examples,
-      'video': instance.video,
+      'video': instance.videoYoutubeId,
     };
 
 Question _$QuestionFromJson(Map<String, dynamic> json) => Question(

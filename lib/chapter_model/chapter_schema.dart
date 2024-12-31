@@ -33,10 +33,10 @@ class SubChapter {
 class Introduction {
   final String explanation;
   final List<String> examples;
-  final String video;
+  final String videoYoutubeId; // the video id from the youtube url. e.g. for this url: https://www.youtube.com/watch?v=sw_O7C1OzD0&t=1s the video id is the part after the 'v=': 'sw_O7C1OzD0&t=1s'
 
   Introduction(
-      {required this.explanation, required this.examples, required this.video});
+      {required this.explanation, required this.examples, required this.videoYoutubeId});
 
   factory Introduction.fromJson(Map<String, dynamic> json) =>
       _$IntroductionFromJson(json);

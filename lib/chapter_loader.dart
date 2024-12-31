@@ -19,7 +19,7 @@ class ChapterLoader {
   static ChapterViewer _chapterToChapterViewer(Chapter chapter){
     var explanation = SucChapterExplanation(explanation: chapter.introduction.explanation);
     var examples = SubChapterExamples(examples: chapter.introduction.examples);
-    var video = SubChapterVideo(videoId: chapter.introduction.video);
+    var video = SubChapterVideo(videoId: chapter.introduction.videoYoutubeId);
     var introduction = SubChapterViewer(title: "Introduction", sections: [explanation, examples, video]);
     var subChapters = chapter.subChapters.map((subChapter) {
       var questions = subChapter.questions.map((question) {
