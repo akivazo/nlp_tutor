@@ -1,21 +1,21 @@
 import 'package:flutter/material.dart';
+import 'package:nlp_tutor/chapter_loader.dart';
+import 'package:nlp_tutor/chapter_viewer/chapter.dart';
 import 'package:nlp_tutor/entrance.dart';
 
-void main() {
-  FlutterError.onError = (FlutterErrorDetails details) {
-    FlutterError.presentError(details); // Log the error
-    debugPrint('Caught Flutter error: ${details.exception}');
-  };
-  runApp(const MainApp());
+void main() async {
+  WidgetsFlutterBinding.ensureInitialized();
+  runApp(MainApp(chapters: await ChapterLoader().loadChapters(),));
 }
 
 class MainApp extends StatelessWidget {
-  const MainApp({super.key});
+  final Map<String, ChapterViewer> chapters;
+  const MainApp({super.key, required this.chapters});
 
   @override
   Widget build(BuildContext context) {
-    return const MaterialApp(
-      home: SafeArea(child: AppEntrance())
+    return MaterialApp(
+      home: SafeArea(child: AppEntrance(chapters: chapters,))
     );
   }
 }

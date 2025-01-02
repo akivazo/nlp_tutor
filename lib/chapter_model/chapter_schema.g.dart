@@ -45,7 +45,7 @@ Map<String, dynamic> _$IntroductionToJson(Introduction instance) =>
     <String, dynamic>{
       'explanation': instance.explanation,
       'examples': instance.examples,
-      'video': instance.videoYoutubeId,
+      'videoYoutubeId': instance.videoYoutubeId,
     };
 
 Question _$QuestionFromJson(Map<String, dynamic> json) => Question(

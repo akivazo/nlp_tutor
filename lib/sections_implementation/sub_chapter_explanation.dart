@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 
-class SucChapterExplanation extends StatelessWidget {
+class SubChapterExplanation extends StatelessWidget {
   final String explanation;
-  const SucChapterExplanation({super.key, required this.explanation});
+  const SubChapterExplanation({super.key, required this.explanation});
 
   @override
   Widget build(BuildContext context) {

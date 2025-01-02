@@ -2,46 +2,39 @@ import 'package:flutter/material.dart';
 import 'package:nlp_tutor/chapter_loader.dart';
 import 'package:nlp_tutor/chapter_viewer/chapter.dart';
 
+class ChapterNavigationButton extends StatelessWidget {
+  final String chapterName;
+  final ChapterViewer chapter;
+
+  const ChapterNavigationButton({super.key, required this.chapterName, required this.chapter});
+  @override
+  Widget build(BuildContext context) {
+    return TextButton(
+        onPressed: () {
+      Navigator.of(context).push(MaterialPageRoute(builder: (context) => chapter));
+    },
+    child: Text(chapterName));
+  }
+
+}
 class AppEntrance extends StatelessWidget {
-  const AppEntrance({super.key});
+  final Map<String, ChapterViewer> chapters;
+  const AppEntrance({super.key, required this.chapters});
 
   @override
   Widget build(BuildContext context) {
-    return FutureBuilder<Map<String, ChapterViewer>>(
-      future: ChapterLoader.loadChapters(),
-      builder: (context, snapshot) {
-        if (snapshot.connectionState == ConnectionState.waiting) {
-          // While waiting for the future to complete
-          return SizedBox.shrink();
-        } else if (snapshot.hasError) {
-          // If the future throws an error
-          return Text('Error: ${snapshot.error}');
-        } else if (snapshot.hasData) {
-          var chapters = snapshot.data!;
-          return Scaffold(
-            body: Center(
-              child: SafeArea(
-                child: Column(
-                  children: chapters.entries.map((entry) {
-                    return Card(
-                      child: TextButton(
-                          onPressed: () {
-                            Navigator.of(context).push(MaterialPageRoute(builder: (context) => entry.value));
-                          },
-                          child: Text(entry.key)
-                      ),
-                    );
-                  }).toList()
-                ),
+        return Scaffold(
+          body: Center(
+            child: SafeArea(
+              child: Column(
+                children: chapters.entries.map((entry) {
+                  return Card(
+                    child: ChapterNavigationButton(chapterName: entry.key, chapter: entry.value)
+                  );
+                }).toList()
               ),
             ),
-          );
-        } else {
-          // If the future completes but returns null
-          return Text('No data available');
-        }
-      },
-
-    );
+          ),
+        );
   }
 }

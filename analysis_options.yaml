@@ -1,1 +1,7 @@
-include: package:flutter_lints/flutter.yaml
+analyzer:
+  exclude:
+    # Exclude other files or directories if needed, e.g., auto-generated files.
+    - '**.g.dart'
+
+  # Optional: Specify files to include for analysis
+  include: [ lib/**, test/**, integration_test/** ]

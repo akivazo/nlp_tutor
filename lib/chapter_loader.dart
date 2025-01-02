@@ -17,7 +17,7 @@ import 'package:nlp_tutor/sections_implementation/text_highlight_question.dart';
 class ChapterLoader {
 
   static ChapterViewer _chapterToChapterViewer(Chapter chapter){
-    var explanation = SucChapterExplanation(explanation: chapter.introduction.explanation);
+    var explanation = SubChapterExplanation(explanation: chapter.introduction.explanation);
     var examples = SubChapterExamples(examples: chapter.introduction.examples);
     var video = SubChapterVideo(videoId: chapter.introduction.videoYoutubeId);
     var introduction = SubChapterViewer(title: "Introduction", sections: [explanation, examples, video]);
@@ -46,7 +46,7 @@ class ChapterLoader {
     return ChapterViewer(subChapters: subChapters);
   }
 
-  static Future<Map<String, ChapterViewer>> loadChapters() async {
+  Future<Map<String, ChapterViewer>> loadChapters() async {
     final String response =
         await rootBundle.loadString('assets/json/chapters.json');
     final List<dynamic> data = json.decode(response);

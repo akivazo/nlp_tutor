@@ -2,6 +2,54 @@ import 'package:flutter/material.dart';
 import 'package:nlp_tutor/chapter_viewer/sub_chapter.dart';
 import 'package:nlp_tutor/entrance.dart';
 
+class NextSectionButton extends StatelessWidget {
+  final void Function() toggleSectionForward;
+
+  const NextSectionButton({super.key, required this.toggleSectionForward});
+  @override
+  Widget build(BuildContext context) {
+    return Column(
+      children: [
+        Text("Next"),
+        IconButton(onPressed: () {
+          toggleSectionForward();
+        }, icon: Icon(Icons.arrow_forward)),
+      ],
+    );
+
+  }
+
+}
+
+class LastSectionButton extends StatelessWidget {
+  final void Function() toggleSectionBackward;
+
+  const LastSectionButton({super.key, required this.toggleSectionBackward});
+  @override
+  Widget build(BuildContext context) {
+    return Column(
+      children: [
+        Text("Back"),
+        IconButton(onPressed: () {
+          toggleSectionBackward();
+        }, icon: Icon(Icons.arrow_back)),
+      ],
+    );
+
+  }
+
+}
+
+class LastPageButton extends StatelessWidget {
+  const LastPageButton({super.key});
+
+  @override
+  Widget build(BuildContext context) {
+    return IconButton(onPressed: () {
+      Navigator.of(context).pop();
+    }, icon: Icon(Icons.arrow_back));
+  }
+}
 
 class ChapterViewer extends StatefulWidget {
   final List<SubChapterViewer> subChapters;
@@ -77,9 +125,7 @@ class _ChapterViewerState extends State<ChapterViewer> {
       onHorizontalDragEnd: _onHorizontalDragEnd,
       child: Scaffold(
         appBar: AppBar(
-          leading: IconButton(onPressed: () {
-            Navigator.of(context).push(MaterialPageRoute(builder: (context) => AppEntrance()));
-          }, icon: Icon(Icons.home)),
+          leading: LastPageButton(),
           centerTitle: true,
           title: Text(currentSubChapter.title,),
         ),
@@ -88,24 +134,22 @@ class _ChapterViewerState extends State<ChapterViewer> {
           crossAxisAlignment: CrossAxisAlignment.center,
           children: [
             SizedBox(height: 20,),
-            Expanded(child: SafeArea(child: Padding(
+            Expanded(child: Padding(
               padding: const EdgeInsets.all(8.0),
               child: currentSection,
-            ))),
+            )),
             Row(
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: [
-                IconButton(onPressed: () {
+                LastSectionButton(toggleSectionBackward: () {
                   setState(() {
-                    toggleSectionBackward();
-                  });
-                }, icon: Icon(Icons.arrow_back)),
-                IconButton(onPressed: () {
+                  toggleSectionBackward();
+                  });}),
+                NextSectionButton(toggleSectionForward: () {
                   setState(() {
                     toggleSectionForward();
-                  });
-                }, icon: Icon(Icons.arrow_forward))
-              ],
+                  });}),
+                ]
             )
 
           ],

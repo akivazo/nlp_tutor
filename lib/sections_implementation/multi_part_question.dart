@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:nlp_tutor/sections_implementation/question_viewer.dart';
 
-class MultiPartQuestionViewer extends StatefulWidget {
+class MultiPartQuestionViewer extends QuestionViewer {
   final String question;
   final List<String> wrongOptions;
   final String rightOption;

@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:nlp_tutor/sections_implementation/question_viewer.dart';
 
-class TextHighlightQuestionViewer extends StatefulWidget {
+class TextHighlightQuestionViewer extends QuestionViewer {
   final String question;
   final String text;
   final String answer;
