@@ -7,7 +7,7 @@ void main() async {
   WidgetsFlutterBinding.ensureInitialized();
   runApp(MainApp(chapters: await ChapterLoader().loadChapters(),));
 }
-
+// new version
 class MainApp extends StatelessWidget {
   final Map<String, ChapterViewer> chapters;
   const MainApp({super.key, required this.chapters});
